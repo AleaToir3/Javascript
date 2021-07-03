@@ -1,0 +1,28 @@
+     start.addEventListener("click",()=>{
+            resultats.innerText= resulta;
+            operation= "";
+            chiffre1 = "";
+            signe="";
+            if(button.addEventListener("click"),()=>{
+                resultats.innerText= "";
+
+            })
+
+        })
+
+
+
+
+
+
+        
+aaa.forEach(
+    bbb=>(select.addEventListener("click",()=>{
+        if(bbb.classList.contains("plus")){
+            console.log("ouaiiii")
+            } else{ 
+            console.log("prout")
+        }
+    })) 
+
+)

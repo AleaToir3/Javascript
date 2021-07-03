@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+    --legris-:rgb(160, 152, 152);
+    --taille-:3px;
+}
+.calculette{
+    width: 400px;
+    height: 600px;
+    background: rgb(212, 212, 212);
+    margin: 50px;
+    border-radius: 10px 10px 150px 10px /10px 10px 100px 10px ;
+    border: rgb(109, 109, 109) 3px solid;
+    position: relative;
+}
+
+.border-m{
+    height: 3px;
+    width: 400px;
+    background:var(--legris-);
+    position: absolute;
+    top: 20px;
+}
+.border-l ,.border-r{
+    height: 20px;
+    width: 3px;
+    background: var(--legris-);
+    position: absolute;
+}
+.border-l{
+    left: 40px;
+}
+.border-r{
+right: 40px;
+}
+.screen{
+    width: 320px;
+    height: 250px;
+    margin: auto;
+    margin-top: 30px;
+    border: 2px black solid;
+    border-radius: 10px 10px 50px 10px / 10px 10px 50px 10px ;
+    background: rgb(141, 140, 140);
+    text-align: center;
+    
+    
+}
+.dotMatrix{
+    font-size: small;
+    color: white;
+    position: relative;
+    
+}
+.redou{
+    width: 300px;
+    height: 2px; 
+    background: rgb(151, 9, 108);
+    top: 8px;
+    position:relative;
+    margin: auto;
+}
+.redou::before{
+    content: 'DOT MATRIX WITH STEREO SOUND ';
+    background: rgb(141, 140, 140);
+    top: -3px;
+    position: relative;
+    padding: 5px;
+
+
+}
+.bleuou{
+    width: 300px;
+    height: 2px; 
+    background: rgb(19, 6, 77);
+    top: 15px;
+    position:relative;
+    margin: auto;
+}
+
+.main-screen{
+    
+    background: rgb(109, 161, 39);
+    height: 200px;
+    width: 230px;
+    margin: auto;
+    margin-top: 15px;
+    border: 1px solid black;
+}
+
+.battery{
+    width: 9px;
+    height: 9px;
+    background: rgb(209, 9, 9);
+    top: 90px;
+    position: relative;
+    border-radius: 50%;
+    left: 15px;
+    font-size: 12px;
+    border: 1px black solid;
+}
+
+.battery::after{
+    position:absolute;
+    content: 'BATTERY';
+    color: white;
+    font-size: 8px;
+    top: 15px;
+    left: -10px;
+}
+#resultats{
+    height: 120px;
+    width: 150px;
+    left: 100px;
+    top: 110px;
+    font-size: 30px;
+    word-wrap: break-word;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+
+}
+.signe{
+    width: 50px;
+    height: 185px;
+    right: 90px;
+    top: 80px;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 25px;
+}
+
+.signe,#resultats{ font-family: 'Press Start 2P', cursive;}
+.plus,.moins,.division{margin-bottom: 20px;}
+.plus:hover,.moins:hover,.division:hover,.multiplication:hover{
+    
+}
+h1{
+    font-family:'Helvetica';
+    font-size: 17px;
+    text-align: left;
+    margin-top: 25px;
+}
+.gb{
+    font-weight: normal;
+}
+.tm{
+    font-weight: normal;
+    font-size: 10px;
+}
+.nb{
+    display: grid;
+    grid-template-columns: repeat(3,40px);
+    grid-auto-columns: repeat(3,40px);
+    grid-template-areas: 
+    "a7 a8 a9"
+    "a4 a5 a6"
+    "a1 a2 a3";
+    font-size: 40px;
+    text-align: center;
+    left: 25px;
+    bottom: 100px;  
+    position: absolute;
+}
+
+.joy-9{grid-area:a9;}
+
+.joy-8{
+    grid-area:a8;
+    border-top: var(--taille-) solid var(--legris-);
+    border-left: var(--taille-) solid var(--legris-);
+    border-right: var(--taille-) solid var(--legris-);
+    border-radius: 5px 5px 0px 0px;
+
+}
+
+.joy-7{grid-area:a7;}
+
+.joy-6{
+    grid-area:a6;
+    border-top: var(--taille-) solid var(--legris-) ;
+    border-right:var(--taille-) solid var(--legris-);
+    border-bottom: var(--taille-) solid var(--legris-);
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+.joy-5{grid-area:a5;
+border-radius: 4px;
+background: #000;
+}
+
+
+.joy-4{
+    grid-area:a4;
+    border-top: var(--taille-) solid var(--legris-) ;
+    border-left:var(--taille-) solid var(--legris-);
+    border-bottom: var(--taille-) solid var(--legris-);
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+.joy-3{grid-area:a3;}
+
+.joy-2{
+    grid-area:a2;
+    border-right: var(--taille-) solid var(--legris-) ;
+    border-left:var(--taille-) solid var(--legris-);
+    border-bottom: var(--taille-) solid var(--legris-);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.joy-1{ grid-area:a1;}
+
+.bgb{ background: rgb(46, 45, 45);}
+.bgg{ color: rgb(102, 99, 99)!important;}
+[class^="joy-"]{    color: white;}
+.select,.start{
+    height: 10px;
+    background: rgb(46, 45, 45);
+    width: 50px;
+    border-radius: 25px;
+    border: var(--legris-) solid 3px;
+    transform: rotate(-35deg);
+    margin: 20px;
+    position: absolute;
+    bottom: 75px;
+}
+.select{
+    left: 130px;
+}
+.start{
+    left: 190px;
+
+}
+.select span,
+.start span{
+    font-size: 10px;
+    position: absolute;
+    top: 15px;
+}
+
+.btn{
+    height: 40px;
+    width: 40px;
+    background: red;
+    border-radius: 50px;
+    border: 3px solid ;
+    position: absolute;
+}
+.btn-a{
+    right: 40px;  
+    bottom: 180px;
+    text-align: center;
+
+}
+.btn-b{
+    right: 120px;
+    bottom: 150px;
+    text-align: center;
+}
+.btn-a,
+.btn-b{
+    font-size: 25px;
+    font-weight:bolder;
+    text-align: center;
+}
+.btn-a span{
+position: absolute;
+top: 5px;
+left: 3px;
+}
+.btn-b span{
+    position: absolute;
+    top: 5px;
+    left: 14px;
+    }
+
+    [class^="joy-"]:hover,
+    .btn-a:hover,.btn-b:hover{ 
+        transform: scale(1.3);
+        background:rgba(0, 0, 0, 0.1);
+        /* border: 5px white solid;         */
+    }
+    .select:hover,.start:hover{
+        transform: scale(1.3) rotate(-35deg);
+        background:rgba(0, 0, 0, 0.507);
+
+    }
+.joy-2:hover{
+}
+
+[class^=trait]{
+    height: 55px;
+    width: 4px;
+    background: var(--legris-);
+    border-radius: 15px;
+    border: 1px black solid ;
+    position: absolute;
+    transform: rotate(-35deg);
+    border-left: black 2px solid;
+
+}
+.trait-1{bottom: 60px;right: 30px;
+}
+.trait-2{bottom: 50px;right: 40px;}
+.trait-3{bottom: 40px;right: 50px;}
+.trait-4{bottom: 30px;right: 60px;}
+
+
+
+    /* 
+    faire le cursort avec des nombre gris foncer / noire
+    et le resite en couleur de fond  
+    ps : ne pas oublier les bordure sur le fond noire :)
+    bontton start permet de valider l'operande avec selecte 
+300 -> 75
+
+ CE C 
+7 8 9 /
+4 5 6 *
+1 2 3 -
+  = . + 
+  
+  pretendo
+  
+  */
+
+  
